@@ -2,7 +2,7 @@
 Smooth scrolling text in Commodore BASIC
 
 ------------------------
-# Initial code:
+#Initial code:
 
 5 ?chr$(147) : rem clear screen
 10 poke214,0:?:poke211,0:?"smooth scrolling text in basic"
@@ -12,7 +12,7 @@ Smooth scrolling text in Commodore BASIC
 50 goto 20
 
 ------------------------
-# Code with smooth scroll register:
+#Code with smooth scroll register:
 
 5 ?chr$(147) : rem clear screen
 10 poke214,0:?:poke211,0:?"smooth scrolling text in basic"
@@ -22,7 +22,7 @@ Smooth scrolling text in Commodore BASIC
 50 poke 53270, 7: goto 20
 
 ------------------------
-# Final optimized code:
+#Final optimized code:
 
 0 foru=3to.step.
 10 for i=7to.step-1:poke z,i:wait s,128,.:next:r=peek(g)
